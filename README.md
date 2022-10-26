@@ -34,8 +34,8 @@ $$ F = (\beta^{2}+1) * {Precision * Recall \over (\beta^{2}Precision + Recall)} 
 
 | hyperparameters | value |
 | ------------------- | ------------------- |
-| Batch Size | classificator: 16, embedder: 32 |
-| Epochs | classificator: 1, embedder: 1 |
+| Batch Size | classifier: 16, embedder: 32 |
+| Epochs | classifier: 1, embedder: 1 |
 | Optimizer | torch.optim.AdamW(lr=1e-4, eps=1e-6) |
 | Warmup Steps | 5% batches ~ 1k |
 | Scheduler | WarmupLinear |
