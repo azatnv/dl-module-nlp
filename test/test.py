@@ -15,7 +15,7 @@ ROOT_ABS = FILE.parents[0]
 ROOT = Path(os.path.relpath(ROOT_ABS, Path.cwd()))
 
 EMBEDDER_PATH = f"{Path.cwd()}/models/embedding_model"
-CLASSIFICATOR_PATH = f"{Path.cwd()}/models/classification_model"
+CLASSIFIER_PATH = f"{Path.cwd()}/models/classification_model"
 
 top_k_vectors = 25
 top_k_sentences = 15
@@ -54,7 +54,7 @@ def test(file=f"{ROOT}/companies_test.csv"):
     all_unique_companies = list(set(df[["name_1", "name_2"]].to_numpy().flatten()))[1:]
 
     embedder = SentenceTransformer(EMBEDDER_PATH)
-    classificator = CrossEncoder(CLASSIFICATOR_PATH)
+    classificator = CrossEncoder(CLASSIFIER_PATH)
 
     corpus_sentences = list(all_unique_companies)
     corpus_embeddings = embedder.encode(corpus_sentences)

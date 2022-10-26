@@ -16,7 +16,7 @@ ROOT_ABS = FILE.parents[0]
 ROOT = Path(os.path.relpath(ROOT_ABS, Path.cwd()))
 
 EMBEDDER_PATH = f"{ROOT}/models/embedding_model"
-CLASSIFICATOR_PATH = f"{ROOT}/models/classification_model"
+CLASSIFIER_PATH = f"{ROOT}/models/classification_model"
 faiss_index_path = f"{ROOT}/data/faiss-index"
 embeddings_cache_path = f"{ROOT}/data/train-embeddings"
 
@@ -27,7 +27,7 @@ with open(embeddings_cache_path, "rb") as file:
 
 print("Loading models..")
 embedder = SentenceTransformer(EMBEDDER_PATH)
-classificator = CrossEncoder(CLASSIFICATOR_PATH)
+classificator = CrossEncoder(CLASSIFIER_PATH)
 index = read_index(faiss_index_path)
 print("Done")
 
