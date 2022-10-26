@@ -53,5 +53,8 @@ $$ F = (\beta^{2}+1) * {Precision * Recall \over (\beta^{2}Precision + Recall)} 
 | ------------- | ------------- | ------------- |
 | 0.98 | 0.18 | 0.31 |
 
-#### Example
+## Pipeline
+<img width="603" alt="image" src="https://user-images.githubusercontent.com/31849841/198042622-9ca7764b-07b6-4eec-a1fa-bcff9d760922.png">
+
+## Example
 ![image](https://user-images.githubusercontent.com/31849841/198023783-3569d01a-8dc6-47b6-88d8-77a25ad214ac.png)
