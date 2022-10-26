@@ -4,4 +4,3 @@ torchvision==0.13.1+cu116
 torchaudio==0.12.1+cu116
 sentence_transformers
 faiss-cpu
-gdown

@@ -16,7 +16,7 @@ ROOT_ABS = FILE.parents[0]
 ROOT = Path(os.path.relpath(ROOT_ABS, Path.cwd()))
 
 EMBEDDER_PATH = f"{ROOT}/models/embedding_model"
-CLASSIFICATOR_PATH = f"{ROOT}/models/model_Zhenya"
+CLASSIFICATOR_PATH = f"{ROOT}/models/classification_model"
 faiss_index_path = f"{ROOT}/data/faiss-index"
 embeddings_cache_path = f"{ROOT}/data/train-embeddings"
 

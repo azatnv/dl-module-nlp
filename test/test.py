@@ -15,7 +15,10 @@ ROOT_ABS = FILE.parents[0]
 ROOT = Path(os.path.relpath(ROOT_ABS, Path.cwd()))
 
 EMBEDDER_PATH = f"{Path.cwd()}/models/embedding_model"
-CLASSIFICATOR_PATH = f"{Path.cwd()}/models/model_Zhenya"
+CLASSIFICATOR_PATH = f"{Path.cwd()}/models/classification_model"
+
+top_k_vectors = 25
+top_k_sentences = 15
 
 
 def is_duplicates_pred(
@@ -25,8 +28,8 @@ def is_duplicates_pred(
     db_SentenceToVector,
     corpus_embeddings,
     corpus_sentences,
-    top_k_vectors=25,
-    top_k_sentences=14,
+    top_k_vectors=top_k_vectors,
+    top_k_sentences=top_k_sentences,
 ):
     # find (top_k_vectors) nearest sentences through cosine similarity of vectors
     name_1_vector = db_SentenceToVector[name_1]
