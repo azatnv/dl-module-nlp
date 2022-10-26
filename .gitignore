@@ -1,4 +1,5 @@
 __pycache__
-/models
-/embedding_model
-/model_Zhenya
+# /models
+# /models/embedding_model
+# /models/model_Zhenya
+.gitignore
