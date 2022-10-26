@@ -18,41 +18,40 @@ python ./test/test.py [--file ./test/companies_test.csv ]
 ```
 ## Метрики
 
-•	Precision (точность) - доля объектов, названных классификатором положительными и при этом действительно являющимися положительными. 
-$$ Precision = TP / (TP + FP) $$
+•	Precision (точность) - доля объектов, названных классификатором положительными и при этом действительно являющимися положительными.
 
-•	Recall (полнота) - доля объектов положительного класса, найденных классификатором, из всех объектов положительного класса.  
-$$ Recall = TP / (TP + FN) $$
+$$ Precision = {TP \over (TP + FP)} $$
+
+•	Recall (полнота) - доля объектов положительного класса, найденных классификатором, из всех объектов положительного класса.
+
+$$ Recall = {TP \over (TP + FN)} $$
 
 •	F-мера - гармоническое среднее между точностью и полнотой. Она стремится к нулю, если точность или полнота стремится к нулю.
-$$ F = (\beta^{2}+1) * (Precision * Recall / (\beta^{2}Precision + Recall)) $$
+
+$$ F = (\beta^{2}+1) * {Precision * Recall \over (\beta^{2}Precision + Recall)} $$
 
 ## Гиперпараметры
 
 | hyperparameters | value |
 | ------------------- | ------------------- |
 | Batch Size | classificator: 16, embedder: 32 |
-| Epochs | classificator: 16\n embedder: 32 |
+| Epochs | classificator: 16, embedder: 32 |
 | Optimizer | torch.optim.AdamW(lr=1e-4, eps=1e-6) |
 | Warmup Steps | 5% batches ~ 1k |
 | Scheduler | WarmupLinear |
 
 ## Результаты работы
 
-#### Скорость поиска
-
-Метод поиска по косинусному сходству
-
+#### Сравение методов поиска
 | method  | speed |
 | ------------- | ------------- |
 | kNN | 230ms  |
 | Approximate NN | 180ms  |
 
 #### Тестовые метрики
-
 | Precission  | Recall | F-мера |
 | ------------- | ------------- | ------------- |
 | 0.98 | 0.18 | 0.31 |
 
 #### Example
-"Картинка"
+![image](https://user-images.githubusercontent.com/31849841/198023783-3569d01a-8dc6-47b6-88d8-77a25ad214ac.png)
