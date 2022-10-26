@@ -27,7 +27,7 @@ with open(embeddings_cache_path, "rb") as file:
 
 print("Loading models..")
 embedder = SentenceTransformer(EMBEDDER_PATH)
-classificator = CrossEncoder(CLASSIFIER_PATH)
+classifier = CrossEncoder(CLASSIFIER_PATH)
 index = read_index(faiss_index_path)
 print("Done")
 
@@ -57,7 +57,7 @@ while True:
         ]
 
     most_similar_sentences = find_k_most_similar_sentences(
-        query, predicted_nearest_sentences, classificator, k=top_k_sentences
+        query, predicted_nearest_sentences, classifier, k=top_k_sentences
     )
 
     print(f"Input company: {query}")
